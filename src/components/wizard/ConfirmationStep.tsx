@@ -166,7 +166,7 @@ const ConfirmationStep = ({ data, onPrevious }: ConfirmationStepProps) => {
                   <Checkbox
                     id="daily-jobs"
                     checked={dailyJobs}
-                    onCheckedChange={setDailyJobs}
+                    onCheckedChange={(checked) => setDailyJobs(checked === true)}
                   />
                   <label htmlFor="daily-jobs" className="text-sm text-gray-700">
                     Send me daily job recommendations
@@ -177,7 +177,7 @@ const ConfirmationStep = ({ data, onPrevious }: ConfirmationStepProps) => {
                   <Checkbox
                     id="weekly-tips"
                     checked={weeklyTips}
-                    onCheckedChange={setWeeklyTips}
+                    onCheckedChange={(checked) => setWeeklyTips(checked === true)}
                   />
                   <label htmlFor="weekly-tips" className="text-sm text-gray-700">
                     Send me weekly career tips and advice
@@ -188,7 +188,7 @@ const ConfirmationStep = ({ data, onPrevious }: ConfirmationStepProps) => {
                   <Checkbox
                     id="agree-terms"
                     checked={agreeTerms}
-                    onCheckedChange={setAgreeTerms}
+                    onCheckedChange={(checked) => setAgreeTerms(checked === true)}
                   />
                   <label htmlFor="agree-terms" className="text-sm text-gray-700">
                     I agree to the{" "}
